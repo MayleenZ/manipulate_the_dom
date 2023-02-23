@@ -17,24 +17,82 @@ document.addEventListener("DOMContentLoaded", function(event) {
   // Do all of your work inside the document.addEventListener  
 
   // Part 1
+const title = document.querySelector("#main-title")
+console.log(title);
 
+title.innerHTML = "Doms Homepage"
 
   // Part 2
 
+body = document.querySelector("body")
+body.style.backgroundColor = "#7DB9B6";
+
 
   // Part 3
+const root = document.querySelector("html")
+console.log(root);
 
+const domFavList = document.querySelector("#favorite-things")
+console.log(domFavList);
+
+const lastLi = domFavList.lastElementChild
+console.log(lastLi);
+lastLi.remove()
 
   // Part 4
+const specialTitle = document.querySelectorAll(".special-title")
 
+for (element of specialTitle) {
+  console.log(element);
+  element.style.fontSize = "2em"
+}
 
   // Part 5
 
+  const pastList = document.querySelector("#past-races")
+  console.log(pastList);
+
+  const LA = pastList.firstElementChild
+  //console.log(LA);
+  const chicago = LA.nextElementSibling.nextElementSibling.nextElementSibling
+  //console.log(chicago);
+  chicago.remove()
 
   // Part 6
-
+const li = document.createElement("li")
+pastList.append(li)
+li.innerText = "New York City"
 
   // Part 7
+//div, h1, p
+const blogs = document.querySelectorAll(".blog-post")
+console.log(blogs);
+
+const div = document.createElement("div")
+console.log(div);
+
+div.setAttribute("class", "blog-post purple")
+
+const h2 = document.createElement("h2")
+//console.log(h2);
+div.appendChild(h2)
+
+h2.textContent = "New York City"
+
+const p = document.createElement("p")
+//console.log(p);
+div.appendChild(p)
+
+p.innerText = "New York is awesome"
+
+const main = document.querySelector(".main")
+main.lastElementChild.appendChild(div)
+
+
+for(element of blogs){
+  console.log(element)
+}
+
 
 
   // Part 8
