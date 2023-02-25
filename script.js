@@ -75,30 +75,77 @@ div.setAttribute("class", "blog-post purple")
 
 const h2 = document.createElement("h2")
 //console.log(h2);
-div.appendChild(h2)
+div.append(h2)
 
 h2.textContent = "New York City"
 
 const p = document.createElement("p")
 //console.log(p);
-div.appendChild(p)
+div.append(p)
 
 p.innerText = "New York is awesome"
 
 const main = document.querySelector(".main")
-main.lastElementChild.appendChild(div)
+main.append(div)
 
-
-for(element of blogs){
-  console.log(element)
-}
+const newBlogs = document.querySelectorAll(".blog-post")
+console.log(newBlogs);
 
 
 
   // Part 8
 
+  // Query select the #quote-titleID element and add a click event handler. That event handler should use the function randomQuote whenever #quote-title is clicked.
+
+document.querySelector("#quote-title").addEventListener("click", randomQuote)
+
 
   // Part 9
+
+const classes = document.getElementsByClassName("blog-post")
+console.log(classes);
+
+const classesArray = [...classes]
+console.log(classesArray);
+
+
+const oneClass = classes[0]
+const twoClass = classes[1]
+const threeClass = classes[2]
+const fourClass = classes[3]
+const fiveClass = classes[4]
+const sixClass = classes[5]
+
+
+
+for (let i = 0; i < classesArray.length; i++){
+  console.log(classesArray[i]);
+}
+
+
+
+function toggP(){
+  oneClass.classList.toggle("purple")
+  twoClass.classList.toggle("purple")
+  threeClass.classList.toggle("purple")
+  fourClass.classList.toggle("purple")
+  fiveClass.classList.toggle("purple")
+  sixClass.classList.toggle("purple")
+}
+
+function toggR(){
+  oneClass.classList.toggle("red")
+  twoClass.classList.toggle("red")
+  threeClass.classList.toggle("red")
+  fourClass.classList.toggle("red")
+  fiveClass.classList.toggle("red")
+  sixClass.classList.toggle("red")
+}
+
+
+
+    document.addEventListener("mouseout", toggP)
+    document.addEventListener("mouseenter", toggR)
 
 
 
